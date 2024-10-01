@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    /* Color */
+    --primary-purple-color: hsl(259, 100%, 65%);
+    --primary-danger-color: hsl(0, 100%, 67%);
+    --off-white: hsl(0, 0%, 94%);
+    --light-grey: hsl(0, 0%, 86%);
+    --smokey-grey: hsl(0, 1%, 44%);
+    --off-black: hsl(0, 0%, 8%);
+    /* Font */
+    --input-font-size: 3.2rem;
+    --primary-font: "Poppins";
+}
+html {
+    font-size: 62.5%;
+    font-family: var(--primary-font);
+}
+
+body {
+    margin: 20em 1em;
+    background-color: var(--off-white);
+}
+.calendar {
+    background-color: white;
+    border-radius: 1em 1em 50% 1em;
+    position: relative;
+    .user-dob-section {
+        display: flex;
+        align-items: center;
+        padding-top: 4em;
+        gap: 2em;
+        justify-content: center;
+        p {
+            font-weight: bold;
+            /*         color: var(--smokey-grey); */
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        .block {
+            padding-block: 0.75em;
+            padding-left: 1em;
+            margin-top: 0.2em;
+            border-radius: 0.5em;
+            border: 1px solid var(--light-grey);
+            width: 80px;
+            font-weight: bold;
+            font-family: var(--primary-font);
+            color: var(--off-black);
+        }
+    }
+    .arrow {
+        background-color: var(--primary-purple-color);
+        width: 40px;
+        position: absolute;
+        left: 50%;
+        margin-top: 1em;
+        padding: 0.75em;
+        border-radius: 50%;
+    }
+    .user-age-section {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 7em;
+        padding-bottom: 10em;
+        article {
+            div {
+                display: flex;
+                font-size: 6rem;
+                font-style: italic;
+                font-weight: 800;
+            }
+            .age {
+                color: var(--primary-purple-color);
+            }
+        }
+    }
+}
+.invaild1,
+.invaild2,
+.invaild3 {
+    font-size: 0.8rem;
+    font-style: italic;
+    margin-top: 0.5em;
+    display: none;
+    font-weight: 400;
+    color: var(--primary-danger-color);
+}
+.day,
+.month,
+.year {
+    color: var(--smokey-grey);
+}
+.invaild-day,
+.invaild-month,
+.invaild-year {
+    display: block;
+}
